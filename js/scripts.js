@@ -14,7 +14,7 @@ $(document).ready(function(){
       $('#rapids').slideUp();
       $('#mansion').slideUp();
 
-    } else if (userHeight > 90 && userHeight <100){
+    } else if (userHeight >= 90 && userHeight < 100){
       $('#dumbo').show();
       $('#pan').show();
       $('#teacup').slideUp();
