@@ -10,7 +10,7 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="page-header">
+    <div class="page-header" align="center">
       <h1>
         Fun World <br>
         <small>Where the fun never ends!</small>
@@ -18,15 +18,41 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
           <div class="jumbotron green">
             <h1>Our Rides</h1>
           </div>
         </div>
       </div>
       <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <div class="selectors">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h2 class="panel-title">Before we get to the fun...</h2>
+              </div>
+              <div class="panel-body">
+                <p>Not all rides are appropriate for all heights! Please enter your height to see what rides you'll be able to ride.</p>
+                <form id="inputPanel" class="form-inline">
+                  <div class="form-group">
+                    <label for="userInput">Enter your height in centimeters</label>
+                    <input type="number" class="form-control" id="userInput" placeholder="120">
+                  </div>
+                  <button type="submit" class="btn btn-success">Show me the rides!</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-md-4">
-          <div class="well minheight90">
+          <div class="well minheight90 nomaxheight" id="dumbo">
             <h3>Dumbo the Flying Elephant</h3>
             <figure class="figure">
               <img src="img/dumbo.jpeg" class="figure-img img-fluid rounded" alt="Dumbo the flying elephant, the ride.">
@@ -36,17 +62,17 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="well minheight90 maxheight150">
+          <div class="well minheight90 nomaxheight" id="pan">
             <h3>Peter Pan's Magical Flight</h3>
             <figure class="figure">
               <img src="img/peterpan.jpeg" class="figure-img img-fluid rounded" alt="Children enjoying Peter Pan's Magical Flight.">
               <figcaption class="figure-caption">Experience Neverland yourself!</figcaption>
             </figure>
-            <p>The minimum height to ride Peter Pan's Magical Ride is 90cm. Sorry parents, the maximum height is 150cm!</p>
+            <p>The minimum height to ride Peter Pan's Magical Ride is 90cm.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="well minheight100">
+          <div class="well minheight100 nomaxheight" id="teacup">
             <h3>Alice's Mad Tea Party</h3>
             <figure class="figure">
               <img src="img/teacupspinner.jpeg" class="figure-img img-fluid rounded" alt="Children riding alice's mad tea cups.">
@@ -58,7 +84,7 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="well minheight120">
+            <div class="well minheight120 nomaxheight" id="splash">
               <h3>Splash Mountain</h3>
               <figure class="figure">
                 <img src="img/splashmountain.jpeg" class="figure-img img-fluid rounded" alt="The log flume on splash mountain goes flying down.">
@@ -68,7 +94,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="well minheight120 maxheight150">
+            <div class="well minheight120 maxheight170" id="space">
               <h3>Space Mountain</h3>
               <figure class="figure">
                 <img src="img/spacemountain.jpeg" class="figure-img img-fluid rounded" alt="The dome that houses space mountain.">
@@ -78,7 +104,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="well minheight130">
+            <div class="well minheight130 nomaxheight" id="pirates">
               <h3>Pirates of the Caribbean</h3>
               <figure class="figure">
                 <img src="img/pirates.jpeg" class="figure-img img-fluid rounded" alt="A flag bearing the pirates of the caribbean logo.">
@@ -90,7 +116,7 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="well minheight140 maxheight170">
+            <div class="well minheight140 maxheight170" id="dwarf">
               <h3>The Seven Dwarfs' Mining Cart</h3>
               <figure class="figure">
                 <img src="img/sevendwarfs.jpeg" class="figure-img img-fluid rounded" alt="The rollercoaster, the Seven Dwarfs' mining cart.">
@@ -100,7 +126,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="well minheight140">
+            <div class="well minheight140 nomaxheight" id="rapids">
               <h3>Stone River Rapids</h3>
               <figure class="figure">
                 <img src="img/rapids.jpeg" class="figure-img img-fluid rounded" alt="A family enjoys the rapid rafting experience.">
@@ -110,7 +136,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="well minheight140 maxheight170">
+            <div class="well minheight140 maxheight170" id="mansion">
               <h3>The Haunted Mansion</h3>
               <figure class="figure">
                 <img src="img/hauntedmansions.jpeg" class="figure-img img-fluid rounded" alt="The spooky exterior of the Haunted Mansion.">
@@ -120,9 +146,11 @@
             </div>
           </div>
         </div>
-
-
-
-
+        <div class="well" id="sorry">
+          <div class="jumbotron green">
+            <h1>Sorry, you're not tall enough to ride <em>any</em> of our rides.</h1>
+          </div>
         </div>
-        <div class="col-md-4">
+      </div>
+    </body>
+  </html>

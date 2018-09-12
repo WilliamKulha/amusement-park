@@ -3,11 +3,15 @@
   text-align: center;
 }
  img {
-   height:182;
-   width:325px;
+   height:91;
+   width:176px;
  }
 
  .highlight {
    background-color: #ffbb33;
    color:#fff;
  }
+
+.well {
+  display:none;
+}
